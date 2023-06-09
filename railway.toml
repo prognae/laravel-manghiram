@@ -1,0 +1,3 @@
+[build]
+builder = "laravel"
+version = "8.x"
