@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Hash;
 class LoginController extends Controller
 {
     //displays the homepage
-    public function index() {
+    public function index(Request $request) {
         return view('homepage', ['user' =>  $request->session() -> get('username')]);
     }
 
