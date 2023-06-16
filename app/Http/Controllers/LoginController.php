@@ -10,7 +10,7 @@ class LoginController extends Controller
 {
     //displays the homepage
     public function index() {
-        return view('homepage', ['user' => session() -> get('username')]);
+        return view('homepage', ['user' =>  $request->session() -> get('username')]);
     }
 
     //validate login
@@ -27,8 +27,8 @@ class LoginController extends Controller
         else if($validate) {
             // return view('homepage', ['user' => $username]);
             if(Hash::check($password, $validate[0]->password)) {
-                session() -> put('username', $username);
-                session() -> put('user_id', $validate[0]->account_id);
+                $request->session() -> put('username', $username);
+                $request->session() -> put('user_id', $validate[0]->account_id);
                 return redirect('/');
             }
             else {
