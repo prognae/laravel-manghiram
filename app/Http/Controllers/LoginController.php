@@ -29,7 +29,7 @@ class LoginController extends Controller
             if(Hash::check($password, $validate[0]->password)) {
                 $request->session() -> put('username', $username);
                 $request->session() -> put('user_id', $validate[0]->account_id);
-                return redirect('/');
+                return redirect('/items');
             }
             else {
                 return redirect()->back()->with('error', 'Invalid username or password');
