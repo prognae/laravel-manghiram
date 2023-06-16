@@ -7,7 +7,8 @@ use Illuminate\Support\Facades\DB;
 
 class ItemController extends Controller
 {
-    function allItems() {
+    function allItems(Request $request) {
+        dd($request->session->all());
         $itemInfo = DB::select('SELECT * FROM item;');
         
         if(!$itemInfo) {
