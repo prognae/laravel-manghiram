@@ -53,7 +53,7 @@
   <form class="modal-content animate" action="/login" method="post">
     @csrf  
 
-    @method('POST')
+    
     <div class="imgcontainer">      
       <h3>Welcome back!</h3>
       @if(session('error'))
