@@ -85,7 +85,7 @@
 </div>
 </div>
 
-<!-- MODAL SIGN UP -->
+<!-- MODAL SIGN UP! -->
 
 <div id="id02" class="modal">
   <div class="modal-box " style="width: 600px;  margin: 5% auto 15% auto;">
